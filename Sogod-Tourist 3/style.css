@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  scroll-behavior: smooth;
+}
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: url(pictures/picture1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: -100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(23, 180, 134, 0) 70%,
+    hsl(162, 77%, 40%) 90.5%
+  );
+  pointer-events: none;
+}
+
+header::after {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+  position: absolute;
+}
+
+main {
+  height: 90%;
+  width: 90%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  padding: 20px;
+  position: relative;
+}
+nav {
+  height: 70px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav h1 {
+  font-size: 20px;
+  margin-left: 80px;
+  color: rgb(255, 255, 255, 0.2);
+}
+nav ul {
+  margin-right: 100px;
+  width: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+nav ul li a:hover {
+  font-size: 20px;
+}
+nav ul li a::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  position: absolute;
+  transition: width 0.3s ease;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.header-main-container {
+  height: 90%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+}
+.title-description-container {
+  height: 50vh;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.title-description-container h1 {
+  font-size: 80px;
+  color: rgb(255, 255, 255, 0.8);
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-style: oblique;
+}
+.title-description-container p {
+  font-size: 16px;
+  font-family: "Noto Serif", serif;
+  color: rgb(255, 255, 255, 0.8);
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+.title-description-container button {
+  padding: 10px;
+  width: 150px;
+  border-radius: 20px;
+  border: none;
+  background-color: #1882df;
+}
+.title-description-container button a {
+  text-decoration: none;
+  color: white;
+}
+.title-description-container button:hover {
+  background-color: #0b65be;
+  transform: scale(1.1);
+}
+
+.explore-container {
+  background-color: #17b486;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(162, 77%, 40%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(217.61, 85%, 46%) 0, transparent 55%);
+  height: 305vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  height: 70vh;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.main-explore-container-1,
+.main-explore-container-2,
+.main-explore-container-3 {
+  height: 85%;
+  width: 20%;
+
+  /* border-radius: 10px; */
+  position: relative;
+  margin: 0 10px;
+}
+
+.main-explore-container-1 {
+  background-image: url(pictures/ariannes.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.main-explore-container-2 {
+  background-image: url(pictures/la-cardida.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-explore-container-3 {
+  background-image: url(pictures/cafe-romara.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.horizontal-line {
+  position: relative;
+  height: 1px;
+  width: 27%;
+  background-color: rgb(255, 255, 255, 0.7);
+  margin: 17px 25px 0 25px;
+}
+.row H1 {
+  color: white;
+  font-family: "Noto Serif", serif;
+  font-size: 25px;
+  width: fit-content;
+  height: fit-content;
+}
+.navigation-links-container {
+  margin-top: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tourist-container {
+  height: 50%;
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-content,
+.right-content {
+  height: 100%;
+  width: 50%;
+  background-color: green;
+}
+
+.left-content {
+  background-image: url(pictures/ariannes.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+
+.right-content {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right-content h1 {
+  color: white;
+  font-family: "Noto Serif", serif;
+  margin-bottom: 20px;
+}
+.right-content p {
+  font-size: 25px;
+  color: white;
+  font-weight: lighter;
+}
